@@ -565,6 +565,7 @@ input {
 
 	.aboutMe_photo img {
 		max-width: 300px;
+		height: 230px;
 		margin-top: 0;
 	}
 
