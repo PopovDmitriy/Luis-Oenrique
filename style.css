@@ -49,7 +49,7 @@ html {
 	text-transform: uppercase;
 }
 
-.list__item a:focus {
+.list__item a:hover {
 	text-transform: capitalize;
 	border-bottom: 1px solid #000;
 	margin-left: 1.27vw;
@@ -78,6 +78,10 @@ html {
 	justify-content: center;
 	align-items: center;
 	margin-right: 15px;
+}
+
+.button:nth-child(even) {
+	margin-right: 0;
 }
 
 .button_knowMore {
@@ -178,8 +182,8 @@ html {
 }
 
 .box-item img {
-	width: 150px;
-	height: 140px;
+	/* width: 154px; */
+	height: 118px;
 }
 
 /*schedule*/
@@ -310,8 +314,8 @@ html {
 
 .icon_box img {
 	padding-bottom: 30px;
-	width: 75px;
-	height: 105px;
+	/* width: 75px; */
+	height: 83px;
 }
 
 .icon_count {
@@ -406,11 +410,7 @@ input {
 	padding-top: 30px;
 	border-top: 1px solid #fff;
 	display: flex;
-	justify-content: space-between;
-}
-
-.socials {
-	display: flex;
+	justify-content: center;
 }
 
 .footer_inner p {
@@ -578,11 +578,6 @@ input {
 		height: 450px;
 	}
 
-	.schedule img {
-		max-width: 80%;
-		height: 106px;
-	}
-
 	.top_btn {
 		left: 120%;
 	}
@@ -590,6 +585,28 @@ input {
 	.services_list_column_2 {
 		grid-template-columns: 1fr 1fr;
 	}
+}
+
+@media screen and (max-width: 420px) {
+	.buttons_row {
+		max-width: 420px;
+		justify-content: center;
+	}
+
+	.box-item img {
+		width: 140px;
+		height: 105px;
+	}
+
+	#form {
+		width: 70%;
+	}
+
+	.top_btn {
+		top: 8%;
+		left: 95%;
+	}
+
 }
 
 @media screen and (max-width: 350px) {
@@ -609,11 +626,6 @@ input {
 		width: 300px;
 	}
 
-	.box-item img {
-		width: 140px;
-		height: 120px;
-	}
-
 	.section_aboutMe {
 		height: 620px;
 	}
@@ -621,9 +633,4 @@ input {
 	.footer p {
 		font-size: 12px;
 	}
-
-	.socials_icons img {
-		width: 20px;
-	}
-
 }
