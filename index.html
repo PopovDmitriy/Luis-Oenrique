@@ -12,7 +12,7 @@
     	<p><a name="top"></a></p>
     	<div class="wrapper">
     		<div class="header__wrapper--logo">
-    			<div class="logo"><img src="img/logo.png" alt="Logo"></div>
+    			<div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
     			<nav class="nav">
     				<ul class="list">
     					<li class="list__item"><a href="#">home</a></li>
@@ -28,12 +28,12 @@
     				<h1 class="main_title">Luis Oenrique</h1>
     				<p class="slogan">User Experiense / User Interface Expert</p>
     				<div class="buttons_row">
-    					<div class="button button_knowMore">
-    						<a href="#">know more</a>
-    					</div>
-    					<div class="button button_hireMe">
-    						<a href="#">hire me</a>
-    					</div>
+    					<!-- <div class="button button_knowMore"> -->
+    						<a href="#" class="button button_knowMore">know more</a>
+    					<!-- </div> -->
+    					<!-- <div class="button button_hireMe"> -->
+    						<a href="#" class="button button_hireMe">hire me</a>
+    					<!-- </div> -->
     				</div>	
     			</div>
     			<div class="main_photo">
@@ -121,7 +121,7 @@
     		</div>
     	</div>		
     </section>
-    <section class=".testimonials">
+    <section class="testimonials">
     	<div class="wrapper">
     		<h2 class="aboutMe_title title-center">testimonials</h2>
     		<div class="report_row">
@@ -129,7 +129,7 @@
     				<img src="img/userPhoto.png" alt="">
     			</div>
     			<div class="reporter_text">
-    				<p class="user_title">Limara Tusi</p>
+    				<h3 class="user_title">Limara Tusi</h3>
     				<p class="user_subtitle">Ceo, random company</p>
     				<p class="user_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, quidem distinctio! Recusandae accusantium laborum officia et, possimus molestiae, quibusdam eveniet libero temporibus odit ipsam dicta velit cupiditate dolorum aliquid. At.</p>
     			</div>
@@ -166,7 +166,7 @@
     </section>
     <section class="section_contact">
     	<h2 class="contact_title">say hello!</h2>
-    	<form action="" id="form">
+    	<form action="" class="form">
     		<div class="form_row">
     			<input type="name" placeholder="Name">
     			<input type="email" placeholder="Email">
@@ -174,14 +174,25 @@
     		<textarea name="comment" id="textarea_comment" cols="30" rows="10" placeholder="Message"></textarea>
     		<div class="wrap_btn">
     			<button class="submit_button">send <i class="far fa-arrow-alt-circle-right"></i></button>
-    			<div class="top_btn"><a href="#top">^</a></div>
+				<div id="top_btn">▲</div>
     		</div>	
     	</form>
     	<footer class="footer">
     		<div class="footer_inner">
-    			<p>2017.All Rights Reserved</p>
+    			<p>2020.All Rights Reserved</p>
     		</div>
    		</footer>
     </section>
 </body>
+
+<script>
+    top_btn.onclick = function() {
+      window.scrollTo(pageXOffset, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+      top_btn.hidden = (pageYOffset < 3000);
+    });
+  </script>
+  
 </html>
