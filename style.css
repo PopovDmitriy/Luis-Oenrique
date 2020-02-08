@@ -105,8 +105,9 @@ html {
     flex-direction: column;
     height: 100%;
     background-color: #4C4C4CFF;
-	right: -100%;
-	
+		right: -100%;
+	overflow-y: auto;
+
 	z-index: 20;
 }
 
