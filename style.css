@@ -145,16 +145,14 @@ html {
 		left: 0;
 	display: none;
 	z-index: 10;
-	opacity: 0.3;
+	opacity: 0.1;
 	width: 100vw;
 	height: 100vh;
-
 }
 
 .burger--active .burger__overlay {
 	display: block;
 	background: #000;
-	overflow-y: hidden;
 }
 
 /*                         	СЛОЙ                */
@@ -743,7 +741,7 @@ input {
 
 	.mySkills {
 		margin-bottom: 50px;
-		height: 450px;
+		/* height: 450px; */
 	}
 
 	.services_list_column_2 {
