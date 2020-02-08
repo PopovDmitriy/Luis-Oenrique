@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Asap:400,400i,500,700|Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -14,13 +15,20 @@
     		<div class="header__wrapper--logo">
     			<div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
     			<nav class="nav">
+
+					<a href="#" class="burger">
+						<span class="burger__lines"></span>
+					</a>
+
     				<ul class="list">
     					<li class="list__item"><a href="#">home</a></li>
     					<li class="list__item"><a href="#">about</a></li>
     					<li class="list__item"><a href="#">service</a></li>
     					<li class="list__item"><a href="#">portfolio</a></li>
     					<li class="list__item"><a href="#">contact</a></li>
-    				</ul>
+					</ul>
+					
+					<div class="burger__overlay"></div>
     			</nav>
     		</div>
     		<div class="wrapper--mainpage">
@@ -185,14 +193,6 @@
     </section>
 </body>
 
-<script>
-    top_btn.onclick = function() {
-      window.scrollTo(pageXOffset, 0);
-    };
-
-    window.addEventListener('scroll', function() {
-      top_btn.hidden = (pageYOffset < 3000);
-    });
-  </script>
+<script src="script.js"></script>
   
 </html>
