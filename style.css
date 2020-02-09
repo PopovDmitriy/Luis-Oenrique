@@ -310,8 +310,6 @@ html {
 
 .about-me__photo {
 	max-width: 500px;
-	display: flex;
-	align-content: center;
 }
 
 .about-me__photo img {
@@ -348,6 +346,7 @@ html {
 
 .about-me h2 {
 	text-align: start;
+	padding-top: 0;
 }
 
 .services__container {
@@ -382,10 +381,8 @@ html {
 }
 
 .skills__schedule {
-	max-width: 500px;
-	display: flex;
-	justify-content: center;
-	
+	width: 60%;
+
 	margin: 0 auto;
 	padding: 20px 0 70px;
 }
