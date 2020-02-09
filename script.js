@@ -1,15 +1,16 @@
-let element = document.querySelector(".nav");
+let nav = document.querySelector(".js-nav");
+let menu = document.querySelector('.js-menu-toggler')
 
 function activeBurger() {
-    element.classList.toggle("burger--active");
+  nav.classList.toggle("burger--active");
 }
 
-element.addEventListener("click", activeBurger);
+menu.addEventListener("click", activeBurger);
 
-top_btn.onclick = function() {
-    window.scrollTo(pageXOffset, 0);
-  };
+top_btn.onclick = function () {
+  window.scrollTo(pageXOffset, 0);
+};
 
-  window.addEventListener('scroll', function() {
-    top_btn.hidden = (pageYOffset < 3000);
-  });
+window.addEventListener('scroll', function () {
+  top_btn.hidden = (pageYOffset < 3000);
+});
