@@ -245,7 +245,6 @@ html {
 
 .header__text {
 	margin-right: 30px;
-	padding-top: 100px;
 }
 
 .header__text a, 
@@ -408,7 +407,6 @@ html {
 }
 
 .portfolio__item {
-	width: 25%;
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
