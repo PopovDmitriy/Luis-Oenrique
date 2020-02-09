@@ -14,8 +14,12 @@ html {
 	padding-top: 40px;
 	width: 100%;
 	background: url(img/bgElement.png) center center no-repeat;
+	background-size: 100% 100%;
+		/* -webkit-background-size: 100%;
+		-ms-background-size: 100% 100%; */
 	margin: 0 auto;
 }
+
 
 .container {
 	max-width: 70%;
@@ -305,6 +309,7 @@ html {
 }
 
 .about-me__photo {
+	max-width: 500px;
 	display: flex;
 	align-content: center;
 }
@@ -327,7 +332,6 @@ html {
 	background: #DFDFDFFF;
 	padding-bottom: 50px;
 	width: 100%;
-	min-height: 650px;
 }
 
 .services h2,
@@ -351,17 +355,17 @@ html {
 	grid-template-columns: 1fr 1fr 1fr; */
 
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
+	justify-content: space-between;
 
 	padding: 20px 0;
-	width: 80%;
 	margin: 0 auto;
 }
 
 .services__item {
 	display: flex;
 	justify-content: center;
-	padding: 30px 0;
+	padding: 30px 12px;
 	margin: 0 auto;
 
 	flex: 1 200px;
@@ -378,7 +382,7 @@ html {
 }
 
 .skills__schedule {
-	width: 60%;
+	max-width: 500px;
 	display: flex;
 	justify-content: center;
 	
@@ -477,7 +481,6 @@ html {
 	justify-content: space-around;
 	align-items: center; 
 
-	flex-wrap: wrap;
 	flex: 1 200px;
 }
 
@@ -602,6 +605,19 @@ input {
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 	padding-bottom: 20px;
+}
+
+
+@media screen and (max-width: 1300px) {
+	.services__container {
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.icons__container {
+		flex-wrap: wrap;
+	}
 }
 
 @media screen and (max-width: 850px) {
