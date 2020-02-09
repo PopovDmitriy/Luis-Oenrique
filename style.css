@@ -14,7 +14,6 @@ html {
 	padding-top: 40px;
 	width: 100%;
 	background: url(img/bgElement.png) center center no-repeat;
-		-webkit-background-size: 100%;
 	margin: 0 auto;
 }
 
@@ -415,6 +414,7 @@ html {
 
 .portfolio__item img{
 	width: 100%;
+	object-fit: cover;
 }
 
 .portfolio__button {
@@ -632,7 +632,7 @@ input {
 
 	.about-me h2 {
 		text-align: center;
-		padding-top: 50px;
+		padding-top: 10px;
 	}
 
 @media screen and (max-width: 450px) {
