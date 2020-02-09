@@ -354,7 +354,7 @@ html {
 	grid-template-columns: 1fr 1fr 1fr; */
 
 	display: flex;
-	/* flex-wrap: wrap; */
+	flex-wrap: wrap;
 	justify-content: space-between;
 
 	padding: 20px 0;
@@ -367,7 +367,7 @@ html {
 	padding: 30px 12px;
 	margin: 0 auto;
 
-	flex: 1 200px;
+	width: 30%;
 }
 
 .services__item img {
