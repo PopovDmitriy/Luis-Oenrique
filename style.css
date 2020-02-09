@@ -12,8 +12,7 @@ html {
 
 .header {
 	padding-top: 40px;
-	max-width: 100%;
-	min-height: 100vh;
+	width: 100%;
 	background: url(img/bgElement.png) center center no-repeat;
 		-webkit-background-size: 100%;
 	margin: 0 auto;
@@ -210,36 +209,37 @@ html {
 	margin-bottom: 30px;
 }
 
-.buttons_row {
+.button__container {
 	width: 90%;
 	display: flex;
 	padding-bottom: 10px;
 }
 
 .button {
-	width: 140px;
-	height: 50px;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-right: 15px;
+	padding: 15px 0;
 }
 
 .button:nth-child(even) {
 	margin-right: 0;
 }
 
-.button_knowMore {
+.button__know-more {
 	background: #FFF;
 	box-shadow: 5px 5px 8px 1px #BBB;
 	border-radius: 2px;
 }
 
-.button_hireMe {
+.button__hire-me {
 	border: 1px solid #000;
 }
 
-.button:hover {
+.button:hover,
+.portfolio__button:hover {
 	background: linear-gradient(206deg, rgba(255, 255, 255, 0.28), rgba(76, 76, 76, 0.21));
 }
 
@@ -248,18 +248,19 @@ html {
 	padding-top: 100px;
 }
 
-.header__text a {
+.header__text a, 
+.about-me a {
 	color: #000;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
-.main_photo {
+.header__photo {
 	display: flex;
 	align-content: center;
 }
 
-.main_photo img {
+.header__photo img {
 	width: 100%;
 	object-fit: contain;
 }
@@ -275,46 +276,42 @@ html {
 
 /*Section__AboutMe*/
 
-.section_aboutMe {
+.about-me {
 	max-width: 100%;
 }
 
-.aboutMe_title {
-	color: #727272FF;
-	font-size: 46px;
-	text-transform: uppercase;
-	margin-bottom: 30px;
-}
-
-.aboutMe_text {
+.about-me__description {
 	color: #565656FF;
 	margin-bottom: 30px;
+
+
 }
 
-.main-about__text {
-	width: 50%;
+.about-me__text {
+	width: 40%;
+	margin-right: 100px;
 }
 
-.button__section {
-	width: 240px;
-	height: 45px;
+.about-me__button {
+	padding: 15px 30px;
 	border: 1px solid black;
 	border-radius: 2px;
+	text-align: center;
 }
 
-.section__wrapper--row {
+.about-me__container {
 	display: flex;
 	justify-content: space-between;
 
 	padding: 80px 0;
 }
 
-.aboutMe_photo {
+.about-me__photo {
 	display: flex;
 	align-content: center;
 }
 
-.aboutMe_photo img {
+.about-me__photo img {
 	width: 100%;
 	object-fit: contain;
 }
@@ -327,14 +324,19 @@ html {
 
 /*Services*/
 
-.section_services {
+.services, 
+.portfolio {
 	background: #DFDFDFFF;
 	padding-bottom: 50px;
 	width: 100%;
 	min-height: 650px;
 }
 
-.section_services h2 {
+.services h2,
+.portfolio h2,
+.testimonials h2,
+.skills h2,
+.about-me h2 {
 	text-transform: uppercase;
 	font-size: 46px;
 	color: #707070FF;
@@ -342,7 +344,11 @@ html {
 	padding: 130px 0 20px;
 }
 
-.services_list_column_2 {
+.about-me h2 {
+	text-align: start;
+}
+
+.services__container {
 	/* display: grid;
 	grid-template-columns: 1fr 1fr 1fr; */
 
@@ -354,12 +360,7 @@ html {
 	margin: 0 auto;
 }
 
-.services_list {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-}
-
-.box-item {
+.services__item {
 	display: flex;
 	justify-content: center;
 	padding: 30px 0;
@@ -368,46 +369,34 @@ html {
 	flex: 1 200px;
 }
 
-.box-item img {
+.services__item img {
 	object-fit: contain;
 }
 
 /*schedule*/
 
-.mySkills {
+.skills {
 	width: 100%;
 }
 
-.mySkills h2 {
-	text-transform: uppercase;
-	font-size: 46px;
-	color: #707070FF;
-	text-align: center;
-	padding: 130px 0 20px;
-}
-
-.schedule {
+.skills__schedule {
 	width: 60%;
 	display: flex;
 	justify-content: center;
 	
 	margin: 0 auto;
-	padding: 20px 0 50px;
+	padding: 20px 0 70px;
 }
 
-.schedule img {
+.skills__schedule img {
 	width: 100%;
 	object-fit: contain;
 }
 
 /*portfolio*/
 
-.wrapper_portfolio {
-	max-width: 60%;
-	margin: 0 auto;
-}
 
-.section__portfolio-list {
+.portfolio__container {
 	margin: 0 0 30px;
 	padding: 20px 0;
 	/* display: grid;
@@ -418,7 +407,7 @@ html {
 	flex-wrap: wrap;
 }
 
-.box-item-site {
+.portfolio__item {
 	width: 25%;
 	display: flex;
 	justify-content: center;
@@ -426,62 +415,52 @@ html {
 	padding: 20px;
 }
 
-.box-item-site img{
+.portfolio__item img{
 	width: 100%;
 }
 
-.load_button a {
+.portfolio__button {
 	color: #000;
-	font-size: 1rem;
-	text-decoration: none
-}
-
-.load_button {
-	width: 190px;
-	height: 50px;
+	font-size: 1rem;	
 	background: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;	
+	display: block;	
 	margin: 0 auto;
+	padding: 15px 40px;
+	border: none;
 }
 
 /*testimonials*/
 
-.report_row {
+.testimonials__container {
 	max-width: 80%;
 	margin: 45px auto 40px;
 	padding: 95px 120px;
 	border-left: 1px solid #000;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 }
 
-.title-center {
-	text-align: center;
-	padding: 130px 0 20px;
-}
-
-.reporter_text {
+.testimonials__text {
 	text-transform: uppercase;
 	padding: 10px;
+	width: 50%;
 }
 
-.reporter_photo {
+.testimonials__photo {
 	width: 160px;
 	margin-right: 30px;
 	padding: 10px;
 }
 
-.reporter_photo img {
+.testimonials__photo img {
 	object-fit: contain;
 }
 
-.user_title {
+.testimonials__user-name {
 	font-size: 30px;
 	font-weight: bold;
 }
-.user_subtitle {
+.testimonials__user-position {
 	font-size: 12px;
 	font-style: italic;
 	margin-bottom: 17px;
@@ -489,11 +468,11 @@ html {
 
 /*icons*/
 
-.section_icons {
+.icons {
 	background: #eee;
 }
 
-.icons {
+.icons__container {
 	width: 70%;
 	margin: 0 auto;
 	display: flex;
@@ -504,24 +483,19 @@ html {
 	flex: 1 200px;
 }
 
-.icon_column {
-	display: flex;
-	padding: 20px 0;
-}
-
-.icon_box {
+.icons__item {
 	padding: 70px;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 }
 
-.icon_box img {
+.icons__item img {
 	padding: 20px 10px 10px;
 	object-fit: contain;
 }
 
-.icon_count {
+.icons__count {
 	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
@@ -529,13 +503,13 @@ html {
 
 /*form*/
 
-.section_contact {
+.contact {
 	background: url(img/contact_bg.png) center center no-repeat;
 		-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
 }
 
-.contact_title {
+.contact__title {
 	color: #fff;
 	font-size: 46px;
 	font-weight: bold;
@@ -544,7 +518,7 @@ html {
 	padding: 165px 0 70px;
 }
 
-.form {
+.contact__form {
 	padding: 10px;
 	width: 40%;
 	margin: 0 auto;
@@ -556,34 +530,25 @@ input {
 	padding-left: 10px;
 }
 
-.form_row {
+.form__container {
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 25px;
 }
 
-#textarea_comment {
+.contact__textarea {
 	width: 98.5%;
 	height: 200px;
 	padding: 15px 0 0 10px;
 }
 
-.submit_button {
+.contact__submit {
 	width: 120px;
 	height: 50px;
 	font-size: 18px;
 	text-transform: uppercase;
-}
-
-.wrap_btn {
-	margin: 35px auto 0;
-
-	display: flex;
-
-	justify-content: center;
-
-	position: relative;
-
+	margin: 35px auto;
+	display: block;
 }
 
 #top_btn {
@@ -626,7 +591,7 @@ input {
 
 /*footer*/
 
-.footer_inner {
+.footer__container {
 	width: 70%;
 	margin: 0 auto;
 	padding-top: 30px;
@@ -635,110 +600,12 @@ input {
 	justify-content: center;
 }
 
-.footer_inner p {
+.footer__container p {
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 	padding-bottom: 20px;
 }
-/* 
-@media screen and (min-width: 1600px) {
-	.container {
-		max-width: 60%;
-	}
-}
 
-@media screen and (max-width: 1800px) {
-	.section__portfolio-list {
-		grid-template-columns: 1fr 1fr;
-	}
-
-	.form_row {
-		flex-direction: column;
-	}
-
-	.form_row input {
-		width: 98%;
-		margin-bottom: 15px;
-	}
-
-	.footer {
-		padding-bottom: 20px;
-	}
-}
-
-@media screen and (max-width: 1600px) {
-	.aboutMe_text {
-		width: 80%;
-		margin: 30px auto;
-	}
-
-	.aboutMe_title {
-		text-align: center;
-	}
-
-	.aboutMe_photo {
-		display: flex;
-		justify-content: center;
-	}
-
-	.button__section {
-		margin: 0 auto;
-	}
-
-	.main_photo img{
-		max-height: 70%;
-	}
-
-	.main_photo {
-		display: flex;
-		align-items: center;
-	}
-}
-
-
-@media screen and (max-width: 1200px) {
-	.container {
-		max-width: 90%;
-	}
-
-	.schedule img {
-		max-width: 80%;
-	}
-
-	.main_photo img{
-		max-height: 60%;
-	}
-
-	.aboutMe_title {
-		text-align: center;
-	}
-
-	.aboutMe_title br {
-		display: none;
-	}
-
-	.section__wrapper--row {
-		flex-direction: column-reverse;
-	}
-
-	.section__wrapper--row img {
-		margin-bottom: 20px;
-	}
-
-	.services_list {
-		grid-template-columns: 1fr;
-	}
-
-	.section__portfolio-list {
-		grid-template-columns: 1fr 1fr;
-	}
-
-	.wrapper_portfolio {
-		max-width: 1200px;
-	}
-}
-
-*/
 @media screen and (max-width: 850px) {
 	.container {
 		width: 80%;
@@ -748,102 +615,54 @@ input {
 		display: none;
 	}
 
-	.main_photo {
+	.header__photo {
 		display: none;
 	}
 
-	.section__wrapper--row {
+	.about-me__container {
 		flex-wrap: wrap-reverse;
 	}
 
-	.main-about__text {
+	.about-me__text {
 		width: 100%;
-	}
-
-	.button__section {
 		margin: 0 auto;
 	}
 
-	.aboutMe_title {
+	.about-me__button {
+		margin: 0 auto;
+	}
+
+	.about-me h2 {
 		text-align: center;
-	}
-	/* .header {
-		margin-bottom: 50px;
-	}
-
-	.main_title {
-		font-size: 80px;
-	}
-	
-	.section__portfolio-list {
-		grid-template-columns: 1fr;
-	}
-
-	.icons {
-		flex-direction: column;
-	}
-
-	.icon_box {
-		padding: 40px;
-	}
-
-	.section_services {
-		margin-bottom: 50px;
-	}
-
-	.mySkills {
-		height: 600px;
-	}
-
-	.reporter_photo img {
-		width: 120px;
-		height: 120px;
-	}
-
-	.report_row {
-		max-width: 70%;
-		padding: 75px 100px;
-	}
-
-	.main_photo img{
-		display: none;
-	}
-
-	.aboutMe_photo img {
-		max-width: 300px;
-		height: 230px;
-		margin-top: 0;
-	}
-
-	.wrapper_p h2 {
 		padding-top: 50px;
 	}
 
-	.mySkills {
-		margin-bottom: 50px;
-	}
-
-	.services_list_column_2 {
-		grid-template-columns: 1fr 1fr;
-	} */
-}
-/*
-*/
 @media screen and (max-width: 450px) {
 	.header__title {
 		font-size: 60px;
 	} 
 
-	.report_row {
+	.testimonials__container {
 		flex-wrap: wrap;
 		padding: 95px 0 120px 10px;
 	}
 
-	.reporter_photo {
+	.testimonials__photo {
 		margin: 0;
 	}
 
-	.form {
+	.testimonials__text {
+		width: 90%;
+		margin: 0 auto;
+		font-size: 0.8rem;
+	}
+
+	.testimonials__text h3,
+	.testimonials__text p:nth-child(even) {
+		text-align: center;
+	}
+
+	.contact__form {
 		width: 70%;
 	}
 
@@ -851,44 +670,4 @@ input {
 	#top_btn {
 		left: 85%;
 	padding: 10px;
-	} */
-
-	/* .buttons_row {
-		max-width: 420px;
-		justify-content: center;
-	}
-
-	.box-item img {
-		width: 140px;
-		height: 105px;
-	}
-
-}
-
-
-/*
-@media screen and (max-width: 350px) {
-	* {
-		font-size: 0.8rem;
-	}
-
-	.main_text {
-		width: 290px;
-	}
-
-	.main_title {
-		font-size: 60px;
-	}
-
-	.box-item-site img {
-		width: 300px;
-	}
-
-	.section_aboutMe {
-		height: 620px;
-	}
-
-	.footer p {
-		font-size: 12px;
-	}
-} */
+	} 
